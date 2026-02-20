@@ -71,6 +71,8 @@
                         Eliminar Usuario
                     </a>
                 </li>
+                <a href="login.php? logout=1" class="boton_salir"> Cerrar Sesion </a> 
+                
             </ul>
         </nav>
     </aside>

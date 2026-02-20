@@ -5,6 +5,12 @@ require_once 'conexionpg.php';
 
 $error = "";
 $exito = "";
+//Procesar cierre de sesión
+if (isset($_GET['logout'])) {
+    session_destroy();
+    header("Location: login.php");
+    exit;
+}
 
 //Si el usuario ya esta logueado, redirigir al dashboard
 if (isset($_SESSION['usuario_id'])) {
@@ -50,12 +56,7 @@ if(isset($_POST['acceder'])) {
    }
 }
 
-//Procesar cierre de sesión
-if (isset($_GET['logout'])) {
-    session_destroy();
-    header("Location: login.php");
-    exit;
-}
+
 ?>
 
 <!DOCTYPE html>
