@@ -8,7 +8,7 @@ $exito = "";
 
 //Si el usuario ya esta logueado, redirigir al dashboard
 if (isset($_SESSION['usuario_id'])) {
-    header("Location: dashboard.php");
+    header("Location: index.php");
     exit;
 }
 
@@ -29,13 +29,13 @@ if(isset($_POST['acceder'])) {
           $usuario = pg_fetch_array($resultado);
 
           //Verificar la contraseña
-          if (password_verify($contraseña, $usuario['contraseña'])) {
+          if ($contraseña===$usuario['contraseña']) {
 	      //Contraseña correcta - iniciar sesión
               $_SESSION['usuario_id'] = $usuario['id_usuario'];
 	      $_SESSION['nombre_usuario'] = $usuario['nombre_usuario'];
 	      $_SESSION['tipo_usuario'] = $usuario['tipo_usuario'];
 
-	      header("Location: dashboard.php");
+	      header("Location: index.php");
 	      exit;
 	  } else {
 	      //Contraseña incorrecta
