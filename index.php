@@ -47,6 +47,30 @@
                         Eliminar Cliente
                     </a>
                 </li>
+                <li>
+                    <a href="MostarUsuario.php">
+                        <i class="fas fa-list"></i>
+                        Ver Usuarios
+                    </a>
+                </li>
+                <li>
+                    <a href="AdicionarUsuario.php">
+                        <i class="fas fa-user-plus"></i>
+                        Adicionar Usuario
+                    </a>
+                </li>
+                <li>
+                    <a href="ModificarUsuario.php">
+                        <i class="fas fa-edit"></i>
+                        Modificar Usuario
+                    </a>
+                </li>
+                <li>
+                    <a href="EliminarUsuario.php">
+                        <i class="fas fa-trash-alt"></i>
+                        Eliminar Usuario
+                    </a>
+                </li>
             </ul>
         </nav>
     </aside>
